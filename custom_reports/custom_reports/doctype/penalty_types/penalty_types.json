@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:penalty_id",
+ "creation": "2025-02-12 14:33:09.189480",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "penalty_id",
+  "penalty_name",
+  "description",
+  "penalty_type",
+  "late_range_start",
+  "late_range_end",
+  "deduction_type",
+  "deduction_value",
+  "repetition_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "penalty_name",
+   "fieldtype": "Data",
+   "label": "Penalty Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "penalty_type",
+   "fieldtype": "Select",
+   "label": "Penaly Type",
+   "options": "late_entry\nearly_exit\nother",
+   "reqd": 1
+  },
+  {
+   "fieldname": "late_range_start",
+   "fieldtype": "Int",
+   "label": "Late Range Start"
+  },
+  {
+   "fieldname": "late_range_end",
+   "fieldtype": "Int",
+   "label": "Late Range End"
+  },
+  {
+   "fieldname": "deduction_type",
+   "fieldtype": "Select",
+   "label": "Deduction Type",
+   "options": "day_percentage\nflat_amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "deduction_value",
+   "fieldtype": "Float",
+   "label": "Deduction Value",
+   "precision": "2"
+  },
+  {
+   "fieldname": "penalty_id",
+   "fieldtype": "Data",
+   "label": "Penalty ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "repetition_time",
+   "fieldtype": "Int",
+   "label": "Repetition Time",
+   "non_negative": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-11 23:07:41.745614",
+ "modified_by": "Administrator",
+ "module": "Custom Reports",
+ "name": "Penalty Types",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

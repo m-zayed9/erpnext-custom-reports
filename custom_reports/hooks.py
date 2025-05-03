@@ -26,7 +26,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/custom_reports/css/custom_reports.css"
-# app_include_js = "/assets/custom_reports/js/custom_reports.js"
+# app_include_js = "/assets/custom_reports/js/custom_format.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/custom_reports/css/custom_reports.css"
@@ -113,6 +113,13 @@ app_license = "mit"
 
 # notification_config = "custom_reports.notifications.get_notification_config"
 
+fixtures = [
+    {
+        "doctype": "Client Script",
+        "filters": [["module" , "in" , ("Custom Reports" )]]
+    }
+]
+
 # Permissions
 # -----------
 # Permissions evaluated in scripted ways
@@ -175,7 +182,7 @@ app_license = "mit"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "custom_reports.event.get_events"
+# 	"frappe.desk.search.search_link": "custom_reports.customizations.custom_search.search_link"
 # }
 #
 # each overriding function accepts a `data` argument;
